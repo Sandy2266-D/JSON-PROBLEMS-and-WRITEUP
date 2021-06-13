@@ -1,0 +1,58 @@
+1.Difference between HTTP1.1 vs HTTP2 HTTP version history 
+
+HTTP1.1 and HTTP 2.0
+
+HTTP 1.1
+-Textual Format
+-Doesnot support Multiplexing
+-Repetation of Header data with every request.
+-Site loading time and preformance is low
+
+HTTP 2.0
+-Binary Format
+-Support Multiplexing
+-Header data will not carry again and again in each request.  
+-Site loading time and preformance is High.
+
+2.Five difference between Browser JS and Node JS
+
+Node JS:(Server side)
+
+- Node doesn't have a predefined "window" object cause it doesn't have a window to draw anything
+- "location" object is related to a particular url; that means it is for page specific. So, node doesn't require that.
+- In Node everything is a module. You must keep your code inside a module.
+- Node is headless.
+- Node processes request object.
+
+Browser JS: (Client Side)
+
+- "window" is a predefined global object which has functions and attributes, that have to deal with window that has been drawn. 
+- "location" is another predefined object in browsers, that has all the information about the url we have loaded.
+- Moduling is not mandatory in client side JavaScript, i.e. in browsers.
+- Browsers are not headless.
+- Browsers processes response objects.
+
+
+3.what happens when you type a URL in the address bar in the browser?
+- Issuing HTTP call,a entity called DNS(Domain Named System) for submiting and converts into host i.e IP address.
+- Initiate TCP conncetion,once its establised the HTTP request (Forward look-up) will reach the server.
+- Server will respond the server response with html, css and Js files.
+- Once reaches its your browser, it will forwarded to rendering engine(which parse HTML,CS & JS into rendering tree).
+- Js file will convert into AST(Abstract syntax tree - breakdown of js code) and AST converts into byte code.
+
+4. Write a write up on Difference between copy by value and copy by reference. 
+
+Copy by value:
+-Arguments will be created in different memory loactions.
+-Values changes in variable in called function,doesnot effect the variables outside the functions.
+-JavaScript passes all arguments to a function by value.
+
+
+Copy by Reference:
+-Arguments will be created in Same memory loactions.
+-Values changes in variable in called function,its effect the variables outside the functions.
+-JavaScript doesnot passes all arguments to a function by value.
+
+5.How to copy by value a composite data type (array+objects). 
+- Copy by value a composite type can be cheieved with the help of spread operator (…), Object.assign() and JSON.stringify() and JSON.parse() methods.
+- Spread operator allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
